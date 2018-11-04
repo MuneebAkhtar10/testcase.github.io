@@ -1,39 +1,55 @@
-var mongoose=require('mongoose');
+
+var mongoose = require("mongoose");
+var rev = mongoose.model("Review");
 //var rev=mongoose.model('Review');
-var rev=require('../models/review');
+// var rev=require('../models/review');
 module.exports.feedRead = function(req, res) {
     res.render("feedback", {
       title: "feedback FoodSetGo!",
     });
   };
-  
 
-module.exports.feedCreate=function(req,res)
-{
-  // let rev=new rev();
-  rev.name=req.body.name;
-  rev.email=req.body.email;
-  rev.restName=req.body.restName;
-  rev.comments=req.body.comments;
-  console.log('success');
-  rev.save(function(err)
+module.exports.feedCreate = function(req, res) {
+  rev.create(
     {
-      if (err){
+      uname: req.body.name,
+      email: req.body.email,
+      restName: req.body.restname,
+      comments: req.body.comment,
+      ratings:req.body.rating
+      
+    },
+    function(err, review) {
+      if (err) {
         console.log(err);
         return;
-      }else{
-        res.send('Review Saved successfully');
-        res.redirect('/');
+      } else {
+        console.log(review);        
+        res.redirect("/");
       }
-    });
+    }
+  );
 };
 
 module.exports.feedReadrev=function(req,res)
 {
+  if(req.params && req.params.id)
+  {
     rev
-      .findById(req.params.feedbackid)
-      .exec(function(err,feedback)
+      .findById(req.params.id)
+      .exec(function(err,review)
       {
-        sendJsonResponse
-      })
-}
+        if(!review)
+
+        {
+          console.log("review id not found");
+        }else if (err){
+          console.log(err);
+        }
+        console.log("location found");
+      });
+
+  }else{
+    console.log("no location id in request");
+  }
+};

@@ -22,7 +22,7 @@ color:violet;
 #pic
 {
    
-    background-image: url("/images/feedback.png");
+    background-image: url("/images/feedback3.jpg");
 }
 
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
@@ -202,17 +202,17 @@ input[type="submit"],a,.agileinfo_social_icons li{
 	width:22%;
 	text-transform:uppercase;
 	font-size:14px;
-	color:pink;
-	background:#cd31c1;
+	color:black;
+	background:#bead61;
 	border:none;
 	cursor:pointer;
 }
 .main_grid2_right input[type="submit"]:hover{
-	background:#df49d3;
+	background:rgb(151, 148, 79);
 }
 /*-- radio button --*/
 span {
-    color: #cd31c1;
+    color: orange;
 }
 .grid-layouts1 ul li,.grid-layouts2 ul li{
 	color: #fff;
@@ -270,13 +270,13 @@ ul li .check::before {
     -webkit-transition: background 0.25s linear;
 }
 input[type=radio]:checked ~ .check {
-	border: 2px solid #cd31c1;
+	border: 2px solid orange;
 }
 input[type=radio]:checked ~ .check::before{
-	background: #cd31c1;
+	background: orange;
 }
 input[type=radio]:checked ~ label{
-	color: #cd31c1;
+	color: orange;
 }
 /*-- /radio button --*/
 .form-ls {

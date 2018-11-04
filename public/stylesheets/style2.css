@@ -312,6 +312,7 @@ img {
 
 .mu-top-slider .mu-top-slider-single .mu-top-slider-content .mu-slider-small-title {
   font-family: "Tangerine", cursive;
+  color:white;
   font-size: 100px;
   font-weight: 400;
   line-height: 40px;
@@ -371,7 +372,7 @@ img {
 .mu-top-slider .slick-prev:focus::before,
 .mu-top-slider .slick-next:hover::before,
 .mu-top-slider .slick-next:focus::before {
-  color: #fff;
+  color: rgb(175, 140, 43);
 }
 
 .mu-top-slider .slick-prev {
@@ -484,7 +485,7 @@ img {
 
 #mu-counter {
   background-attachment: fixed;
-  background-image: url("assets/img/counter-bg.jpg");
+  background-image: url("/images/counter-bg.jpg");
   background-size: cover;
   display: inline;
   float: left;
@@ -693,7 +694,7 @@ RESERVATION SECTION
 ====================*/
 
 #mu-reservation {
-  background-color: #222;
+  background-color:white;
   display: inline;
   float: left;
   padding: 100px 0;

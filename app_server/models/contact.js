@@ -1,13 +1,13 @@
  var mongoose = require( 'mongoose' );
 
-
- var contactSchema = new mongoose.Schema({ 
-    // contactID= {type:Number,required:true},
+    contactSchema = new mongoose.Schema({ 
+    
      contactName:{type:String,required: true},
-     contactSub:{type:String,required: true},
      contactEmail:{type:String,required: true},
-     contactPhone:{type:String,required: true},
+     contactSub:{type:String,required: true}, 
+     contactMsg:{type:String,required: true},
      
  });
 
- //mongoose.model("Contact", contactSchema);  
+ var contact = mongoose.model("contact",contactSchema);
+module.exports = contact;  

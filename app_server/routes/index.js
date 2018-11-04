@@ -16,6 +16,7 @@ var ctrlfeedback = require("../controllers/feedback");
 //  router.get("/location/review/new", ctrlHome.addReview); 
 
   router.get("/",ctrlmain.index);
+  router.post("/",ctrlmain.contact2);
 /* Other pages*/
 router.get("/about", ctrlOthers.about);
 router.get("/login", ctrllogin.login);
@@ -24,10 +25,11 @@ router.get("/signUp", ctrlsignUp.signUp);
 router.post("/signUp",ctrlsignUp.signUpCreate);
 
 router.get("/orders", ctrlorders.orders);
+router.post("/orders", ctrlorders.orderSchema);
 
 
 router.get("/feedback/add", ctrlfeedback.feedRead);
 router.post("/feedback/add",ctrlfeedback.feedCreate);
-//router.get("/feedback/:feedbackid",ctrlfeedback.feedReadrev);
+router.get("/feedback/:feedbackid",ctrlfeedback.feedReadrev);
 
 module.exports = router;

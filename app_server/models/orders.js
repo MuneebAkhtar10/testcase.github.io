@@ -1,10 +1,13 @@
- var mongoose = require( 'mongoose' );
- var orderSchema = new mongoose.Schema({ 
-    // orderID: {type:Number,required: true},
-    // have to add restID and locID
-    restaurant: { type: mongoose.Schema.Types.ObjectId, ref: 'Restaurant'},
-    locations:{ type: mongoose.Schema.Types.ObjectId, ref: 'Location'}
 
- });
+ var mongoose = require("mongoose");
 
- mongoose.model('Orders',orderSchema); 
+  orderSchema = new mongoose.Schema({
+      
+  restName: { type: String, required: true },
+  locName: { type: String, required: true },
+  cuisineName: { type: String, required: true },
+  time: { type: String ,required: true}
+});
+
+var orders = mongoose.model("orders", orderSchema);
+module.exports = orders;

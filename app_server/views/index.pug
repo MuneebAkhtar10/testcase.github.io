@@ -32,6 +32,7 @@ a.scrollToTop(href='#')
   i.fa.fa-angle-up
 // END SCROLL TOP BUTTON
 // Start header section
+
 header#mu-header
   nav.navbar.navbar-default.mu-main-navbar(role='navigation')
     .container
@@ -46,18 +47,18 @@ header#mu-header
         // Text based logo
         a#size.navbar-brand(href='index.html')
           img(src='/images/logo1.png')
-        a.navbar-brand(href='index.html')
+        a.navbar-brand(href='#home')
           | FoodSet
           span Go
+        // Image based logo
+        // <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="Logo img"></a>
       #navbar.navbar-collapse.collapse
         ul#top-menu.nav.navbar-nav.navbar-right.mu-main-nav
-          li
-            a(href='index.html') HOME
+
           li
             a(href='#mu-about-us') ABOUT US
           li
-            a(href='#mu-restaurant-menu') MENU
-          // <li><a href="#mu-reservation">RESERVATION</a></li>
+            a(href='orders') ORDERS
           li
             a(href='#mu-gallery') GALLERY
           // <li><a href="#mu-chef">OUR CHEFS</a></li>
@@ -78,35 +79,39 @@ section#mu-slider
     .mu-top-slider
       // Top slider single slide
       .mu-top-slider-single
-        img(src='/images/slider/13.jpg', alt='img')
+        img(src='images/slider/13.jpg', alt='img')
         // Top slider content
         .mu-top-slider-content
           span.mu-slider-small-title Welcome
           h2.mu-slider-title To FoodSetGo!
+          p Have your favorite restaurants delivered to your door. Order now with FoodSetGo!
           
           a.mu-readmore-btn.mu-reservation-btn(href='#mu-reservation') PLACE YOUR ORDER
+           a(href='orders')
+           
+      // / Top slider content
+      // / Top slider single slide
+      // Top slider single slide
+      .mu-top-slider-single
+        img(src='images/slider/11.jpg', alt='img')
+        // Top slider content
+        .mu-top-slider-content
+          span.mu-slider-small-title Over
+          h2.mu-slider-title 500+ Satisfied Customers
+          p Share your experience with us now!
+          a.mu-readmore-btn.mu-reservation-btn(href='#mu-reservation')  GIVE FEEDBACK
+          //- a(href='feedback/add') GIVE FEEDBACK
         // / Top slider content
       // / Top slider single slide
       // Top slider single slide
       .mu-top-slider-single
-        img(src='/images/slider/11.jpg', alt='img')
+        img(src='images/slider/12.jpg', alt='img')
         // Top slider content
         .mu-top-slider-content
-          span.mu-slider-small-title The Elegant
-          h2.mu-slider-title Italian Restaurant
-          
-          a.mu-readmore-btn.mu-reservation-btn(href='#mu-reservation') GIVE FEEDBACK
-        // / Top slider content
-      // / Top slider single slide
-      // Top slider single slide
-      .mu-top-slider-single
-        img(src='/images/slider/12.jpg', alt='img')
-        // Top slider content
-        .mu-top-slider-content
-          span.mu-slider-small-title Delicious
-          h2.mu-slider-title Spicy Masalas
-          
-          a.mu-readmore-btn.mu-reservation-btn(href='#mu-reservation') ADD RECIPE
+          span.mu-slider-small-title Over
+          h2.mu-slider-title 1000+ Recipes  
+          p Share your own recipe with us today!
+          a.mu-readmore-btn.mu-reservation-btn(href='#mu-reservation') ADD YOUR RECIPE
         // / Top slider content
       // / Top slider single slide
 // End slider
@@ -122,9 +127,29 @@ section#mu-about-us
           .row
             .col-md-6
               .mu-about-us-left
-                img(src='/images/about-us.png', alt='img')
+                img(src='images/about-us.png', alt='img')
             .col-md-6
               .mu-about-us-right
+                p
+                  | For all the food lovers who are eager to taste the yummiest food and never want to miss an opportunity to savor delicious items, FoodSetGo is the ideal platform for you. We provide food delivery services without charging a single rupee.
+                  | All a customer needs is to enter his location, select restaurant from where he can order food and have it at his doorstep.
+                |                    &#x9;Here are some common reasons, why you should always choose FoodSetGo to satisfy your hunger:&#x9;&#x9;&#x9;  
+                ul
+                  li
+                    b  No Frustration, No Misunderstanding 
+                    |  Just go online, place your order and receive you favorite food at your home within few minutes.
+                  li
+                    b  24/7 service 
+                    |  No matter when you are felling hungry, FoodSetGo is always available for your services. You can place your order at any time.
+                  li
+                    b  Menu simpler to Manage 
+                    |  An online menu is simple and easy to understand, as FoodSetGo gives you detail description of each item.
+                  li
+                    b  Modify or cancel your order 
+                    |  FoodSetGo offers the facility to our customers to change or cancel their order within 15 minutes after placing order.
+                p
+                  | &quot;Bringing good food into your everyday.&quot; That&apos;s our mission.
+                  | That means we don&apos;t just deliver--we bring it, always going the extra mile to make your experience memorable.
 // End About us
 // Start Counter Section
 section#mu-counter
@@ -136,34 +161,33 @@ section#mu-counter
             ul.mu-counter-nav
               li.col-md-3.col-sm-3.col-xs-12
                 .mu-single-counter
-                  span Fresh
+                  span Over
                   h3
                     span.counter-value(data-count='150') 0
                     sup +
-                  p Breakfast Items
+                  p Menu Items
               li.col-md-3.col-sm-3.col-xs-12
                 .mu-single-counter
-                  span Delicious
+                  span Over
                   h3
-                    span.counter-value(data-count='60') 0
+                    span.counter-value(data-count='200') 0
                     sup +
-                  p Lunch Items
+                  p Restaurants
               li.col-md-3.col-sm-3.col-xs-12
                 .mu-single-counter
-                  span Hot
+                  span Over
                   h3
                     span.counter-value(data-count='45') 0
                     sup +
-                  p Coffee Items
+                  p Cuisines
               li.col-md-3.col-sm-3.col-xs-12
                 .mu-single-counter
                   span Satisfied
                   h3
-                    span.counter-value(data-count='6560') 0
+                    span.counter-value(data-count='500') 0
                     sup +
                   p Customers
 // End Counter Section
-// Start Restaurant Menu
 
 // Start Gallery
 section#mu-gallery
@@ -181,82 +205,82 @@ section#mu-gallery
               .mu-single-gallery.col-md-4
                 .mu-single-gallery-item
                   figure.mu-single-gallery-img
-                    a.mu-imglink(href='/images/gallery/1.jpg')
-                      img(alt='img', src='/images/gallery/1.jpg')
+                    a.mu-imglink(href='images/gallery/1.jpg')
+                      img(alt='img', src='images/gallery/1.jpg')
                       .mu-single-gallery-info
-                        img.mu-view-btn(src='/images/plus.png', alt='plus icon img')
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
               // End single gallery image
               // start single gallery image
               .mu-single-gallery.col-md-4
                 .mu-single-gallery-item
                   figure.mu-single-gallery-img
-                    a.mu-imglink(href='/images/gallery/2.jpg')
-                      img(alt='img', src='/images/gallery/2.jpg')
+                    a.mu-imglink(href='images/gallery/2.jpg')
+                      img(alt='img', src='images/gallery/2.jpg')
                       .mu-single-gallery-info
-                        img.mu-view-btn(src='/images/plus.png', alt='plus icon img')
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
               // End single gallery image
               // start single gallery image
               .mu-single-gallery.col-md-4
                 .mu-single-gallery-item
                   figure.mu-single-gallery-img
-                    a.mu-imglink(href='/images/gallery/3.jpg')
-                      img(alt='img', src='/images/gallery/3.jpg')
+                    a.mu-imglink(href='images/gallery/3.jpg')
+                      img(alt='img', src='images/gallery/3.jpg')
                       .mu-single-gallery-info
-                        img.mu-view-btn(src='/images/plus.png', alt='plus icon img')
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
               // End single gallery image
               // start single gallery image
               .mu-single-gallery.col-md-4
                 .mu-single-gallery-item
                   figure.mu-single-gallery-img
-                    a.mu-imglink(href='/images/gallery/4.jpg')
-                      img(alt='img', src='/images/gallery/4.jpg')
+                    a.mu-imglink(href='images/gallery/4.jpg')
+                      img(alt='img', src='images/gallery/4.jpg')
                       .mu-single-gallery-info
-                        img.mu-view-btn(src='/images/plus.png', alt='plus icon img')
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
               // End single gallery image
               // start single gallery image
               .mu-single-gallery.col-md-4
                 .mu-single-gallery-item
                   figure.mu-single-gallery-img
-                    a.mu-imglink(href='/images/gallery/5.jpg')
-                      img(alt='img', src='/images/gallery/5.jpg')
+                    a.mu-imglink(href='images/gallery/5.jpg')
+                      img(alt='img', src='images/gallery/5.jpg')
                       .mu-single-gallery-info
-                        img.mu-view-btn(src='/images/plus.png', alt='plus icon img')
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
               // End single gallery image
               // start single gallery image
               .mu-single-gallery.col-md-4
                 .mu-single-gallery-item
                   figure.mu-single-gallery-img
-                    a.mu-imglink(href='/images/gallery/6.jpg')
-                      img(alt='img', src='/images/gallery/6.jpg')
+                    a.mu-imglink(href='images/gallery/6.jpg')
+                      img(alt='img', src='images/gallery/6.jpg')
                       .mu-single-gallery-info
-                        img.mu-view-btn(src='/images/plus.png', alt='plus icon img')
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
               // End single gallery image
               // start single gallery image
               .mu-single-gallery.col-md-4
                 .mu-single-gallery-item
                   figure.mu-single-gallery-img
-                    a.mu-imglink(href='/images/gallery/7.jpg')
-                      img(alt='img', src='/images/gallery/7.jpg')
+                    a.mu-imglink(href='images/gallery/7.jpg')
+                      img(alt='img', src='images/gallery/7.jpg')
                       .mu-single-gallery-info
-                        img.mu-view-btn(src='/images/plus.png', alt='plus icon img')
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
               // End single gallery image
               // start single gallery image
               .mu-single-gallery.col-md-4
                 .mu-single-gallery-item
                   figure.mu-single-gallery-img
-                    a.mu-imglink(href='/images/gallery/8.jpg')
-                      img(alt='img', src='/images/gallery/8.jpg')
+                    a.mu-imglink(href='images/gallery/8.jpg')
+                      img(alt='img', src='images/gallery/8.jpg')
                       .mu-single-gallery-info
-                        img.mu-view-btn(src='/images/plus.png', alt='plus icon img')
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
               // End single gallery image
               // start single gallery image
               .mu-single-gallery.col-md-4
                 .mu-single-gallery-item
                   figure.mu-single-gallery-img
-                    a.mu-imglink(href='/images/gallery/9.jpg')
-                      img(alt='img', src='/images/gallery/9.jpg')
+                    a.mu-imglink(href='images/gallery/9.jpg')
+                      img(alt='img', src='images/gallery/9.jpg')
                       .mu-single-gallery-info
-                        img.mu-view-btn(src='/images/plus.png', alt='plus icon img')
+                        img.mu-view-btn(src='images/plus.png', alt='plus icon img')
               // End single gallery image
 // End Gallery
 // Start Client Testimonial section
@@ -276,22 +300,25 @@ section#mu-client-testimonial
                 li
                   .mu-testimonial-single
                     .mu-testimonial-info
-                      
+                      p
+                        | Flexible timing, good environment, young culture, workaholic and energetic culture in FoodSetGo.
                     .mu-testimonial-bio
-                      
+                      p - Muneeb
                 li
                   .mu-testimonial-single
                     .mu-testimonial-info
-                      
+                      p
+                        | Conducive working environment, friendly team leader & colleagues, work-life balance, good perks & benefits
                     .mu-testimonial-bio
-                     
+                      p - Roshan
                 li
                   .mu-testimonial-single
                     .mu-testimonial-info
-                      
+                      p
+                        | As a FoodSetGo delivery girl working in foodSetGo I'm earning monthly 40k+
                     .mu-testimonial-bio
-                     
-// Start Contact section
+                      p - Hamna
+
 section#mu-contact
   .container
     .row
@@ -307,7 +334,7 @@ section#mu-contact
                   // Email message div
                   #form-messages
                   // Start contact form
-                  form#ajax-contact.mu-contact-form(method='post', action='mailer.php')
+                  form#ajax-contact.mu-contact-form(method='post', action='#')
                     .form-group
                       label(for='name') Your Name
                       input#name.form-control(type='text', name='name', placeholder='Name', required='')
@@ -324,32 +351,20 @@ section#mu-contact
               .col-md-6
                 .mu-contact-right
                   .mu-contact-widget
+                    p
+                      | We are here to answer any questions you may have about FoodSetGo. Reach out to us and we&apos;ll respond as soon as we can.
                     h3 Office Address
-                    
                     address
                       p
                         i.fa.fa-phone
-                        |  (850) 457 6688
+                        |  UAN: 111-374-374
                       p
                         i.fa.fa-envelope-o
-                        | contact@markups.io
+                        | contact@foodsetgo.io
                       p
                         i.fa.fa-map-marker
-                        | 368 St
-                  .mu-contact-widget
-                    h3 Open Hours
-                    address
-                      p
-                        span Monday - Friday
-                        |  9.00 am to 12 pm
-                      p
-                        span Saturday
-                        |  9.00 am to 10 pm
-                      p
-                        span Sunday
-                        |  10.00 am to 12 pm
-// End Contact section
-// Start Footer
+                        | 24/A Faial Town Opposite P.S.O Petrol Pump, Lahore.
+
 footer#mu-footer
   .container
     .row
@@ -368,6 +383,7 @@ footer#mu-footer
               span.fa.fa-youtube
           .mu-footer-copyright
             p &copy; Copyrights FoodSetGo. All rights reserved.
+
 // End Footer
 // jQuery library
 script(src='/javascripts/jquery.min.js')

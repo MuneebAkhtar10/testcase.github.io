@@ -1,17 +1,17 @@
 var mongoose = require("mongoose");
 var gracefulShutdown;
-// var dbURI = "mongodb://user:foodme1@ds237723.mlab.com:37723/mydb"; 
-var dbURI = "mongodb://localhost/foodsetgo";
+ var dbURI = "mongodb://user:foodme1@ds237723.mlab.com:37723/mydb"; 
+// var dbURI = "mongodb://localhost/foodsetgo";
 
-// if (process.env.NODE_ENV === "production") {
-//   // dbURI = "mongodb://user:foodme1@ds237723.mlab.com:37723/mydb"; 
-//   dbURI = "mongodb://localhost/foodsetgo";
-// }
-// mongoose.connect(
-//   dbURI,
-//   { useNewUrlParser: true }
+if (process.env.NODE_ENV === "production") {
+    dbURI = "mongodb://user:foodme1@ds237723.mlab.com:37723/mydb"; 
+  // dbURI = "mongodb://localhost/foodsetgo";
+}
+mongoose.connect(
+  dbURI,
+  { useNewUrlParser: true }
   
-// );
+);
 mongoose.connect(dbURI);
 
 mongoose.connection.on("connected", function() {
@@ -59,7 +59,7 @@ mongoose.connection.on('error',function(err)
 // });
 require("./signup");
  require("./member");
-// require("./orders");
+ require("./orders");
 // require("./discount");
 // require("./management");
  require("./menu");
