@@ -129,7 +129,15 @@ head
           .agileits_main_grid.l_main_grid
             span.agileits_grid
               label Resturant Name 
-              input(style='color:black', type='text', name='restname', placeholder='Resturant Name', required='')
+              //input(style='color:black', type='text', name='restname', placeholder='Resturant Name', required='')
+              <input list="restname" name="restname", placeholder="Restaurant Name", required="">
+              <datalist id="restname">
+              <option value="KFC">
+              <option value="Pizza hut">
+              <option value="Burger Lab">
+              //<option value="Opera">
+              //<option value="Safari">
+              </datalist>
           .agileits_main_grid.l_main_grid
             span.agileits_grid
               label Comments 

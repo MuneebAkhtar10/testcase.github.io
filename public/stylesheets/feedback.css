@@ -22,7 +22,7 @@ color:violet;
 #pic
 {
    
-    background-image: url("/images/feedback3.jpg");
+    background-image: url("/images/feedback4.jpg");
 }
 
 blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
@@ -379,6 +379,12 @@ option{
 }
 .main_grid input[type="text"], #category, #category1, #risk, #priority, .main_grid input[type="email"], .main_grid textarea {
 	width: 94.5%;
+	height:20px;
+}
+.main_grid input[type="list"], #category, #category1, #risk, #priority, .main_grid input[type="restname"], .main_grid textarea {
+	width: 94.5%;
+	height:40px;
+	left:50px;
 }
 .main_grid span label i {
 	right: 71%;
